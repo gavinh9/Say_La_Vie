@@ -11,6 +11,11 @@ ASayLaVieCharacter::ASayLaVieCharacter(const class FPostConstructInitializePrope
 	: Super(PCIP)
 {
 
+	//This is the player component that allows the player to interact with in game objects
+	InteractionRadius = PCIP.CreateDefaultSubobject<USphereComponent>(this, TEXT("InteractionRadius"));
+	InteractionRadius->AttachTo(RootComponent);
+	InteractionRadius->SetSphereRadius(200.f);
+
 	// Set size for collision capsule
 	CapsuleComponent->InitCapsuleSize(42.f, 96.0f);
 
@@ -68,6 +73,27 @@ void ASayLaVieCharacter::SetupPlayerInputComponent(class UInputComponent* InputC
 	// handle touch devices
 	InputComponent->BindTouch(IE_Pressed, this, &ASayLaVieCharacter::TouchStarted);
 	InputComponent->BindTouch(IE_Released, this, &ASayLaVieCharacter::TouchStopped);
+}
+
+void ASayLaVieCharacter::playerInteract(){
+	//Creates an array of actors within the players sphere of interaction
+	TArray<AActor*> CollidingCharacters;
+	InteractionRadius->GetOverlappingActors(CollidingCharacters);
+
+	//Iterates through the possible actors with which the player is currently colliding
+	for (int i = 0; i < CollidingCharacters.Num(); i++){
+		/*
+		We may need to write a tie breaker algorithm to determine the object with which the player
+		is most likely trying to interact with
+		*/
+
+		/*
+		Detect Class type
+		Cast to appropriate Actor type
+		Call appropriate actor method
+		EX Characters will cause dialogue to appear on screen
+		*/
+	}
 }
 
 

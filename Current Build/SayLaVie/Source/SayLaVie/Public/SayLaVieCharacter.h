@@ -8,6 +8,10 @@ UCLASS(config=Game)
 class ASayLaVieCharacter : public ACharacter
 {
 	GENERATED_UCLASS_BODY()
+public:
+
+	void playerInteract();
+
 
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
@@ -36,6 +40,8 @@ protected:
 
 	/** Called for side to side input */
 	void MoveRight(float Value);
+
+
 
 
 	/** 
