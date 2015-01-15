@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\SayLaVie.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{282B9B18-FF7A-4F25-87C5-75CF53AC35B8}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\SayLaVie.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\SayLaVieEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{EDCA138C-002E-4FA8-82B1-8C85D09EA9CB}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\SayLaVie">
+			<UniqueIdentifier>{E91B672C-B77E-4291-AB1C-C52D2B841339}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\SayLaVie\SayLaVie.Build.cs">
+			<Filter>Source\SayLaVie</Filter>
+		</None >
+		<Filter Include="Source\SayLaVie\Private">
+			<UniqueIdentifier>{2C0330C2-B2A4-48BE-A709-6E104E81B0AF}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\SayLaVie\Private\groceryMinigame.cpp">
+			<Filter>Source\SayLaVie\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\SayLaVie\Private\minigameActor.cpp">
+			<Filter>Source\SayLaVie\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\SayLaVie\Private\minigameController.cpp">
+			<Filter>Source\SayLaVie\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\SayLaVie\Private\SayLaVie.cpp">
+			<Filter>Source\SayLaVie\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\SayLaVie\Private\SayLaVieCharacter.cpp">
+			<Filter>Source\SayLaVie\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\SayLaVie\Private\SayLaVieGameMode.cpp">
+			<Filter>Source\SayLaVie\Private</Filter>
+		</ClCompile >
+		<Filter Include="Source\SayLaVie\Public">
+			<UniqueIdentifier>{FC86832B-4BDA-4C64-8D51-932C2B191AD4}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\SayLaVie\Public\groceryMinigame.h">
+			<Filter>Source\SayLaVie\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\SayLaVie\Public\minigameActor.h">
+			<Filter>Source\SayLaVie\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\SayLaVie\Public\minigameController.h">
+			<Filter>Source\SayLaVie\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\SayLaVie\Public\SayLaVie.h">
+			<Filter>Source\SayLaVie\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\SayLaVie\Public\SayLaVieCharacter.h">
+			<Filter>Source\SayLaVie\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\SayLaVie\Public\SayLaVieGameMode.h">
+			<Filter>Source\SayLaVie\Public</Filter>
+		</ClInclude >
+		<Filter Include="Source\SayLaVie\Resources">
+			<UniqueIdentifier>{BA0DFA5F-6EEC-4F12-9F9A-C308B8BB3CF5}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\SayLaVie\Resources\Windows">
+			<UniqueIdentifier>{A8A01711-FFBE-4B20-BE0A-F1FF5F015910}</UniqueIdentifier>
+		</Filter>
+		<ResourceCompile Include="..\..\Source\SayLaVie\Resources\Windows\SayLaVie.rc">
+			<Filter>Source\SayLaVie\Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
+</Project>
