@@ -1,7 +1,7 @@
 // Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
 
 #include "SayLaVie.h"
-//#include "groceryMinigame.h"
+#include "groceryMinigame.h"
 #include "SayLaVieCharacter.h"
 
 //////////////////////////////////////////////////////////////////////////
@@ -91,8 +91,10 @@ void ASayLaVieCharacter::playerInteract(){
 		Detect Class type
 		Cast to appropriate Actor type
 		Call appropriate actor method
-		EX Characters will cause dialogue to appear on screen
+			EX Characters will cause dialogue to appear on screen
 		*/
+		AgroceryMinigame* minigame = Cast<AgroceryMinigame>(CollidingCharacters[i]);
+		minigame->Interact();
 	}
 }
 
