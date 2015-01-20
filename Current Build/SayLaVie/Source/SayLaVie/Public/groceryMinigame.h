@@ -16,4 +16,8 @@ class SAYLAVIE_API AgroceryMinigame : public AminigameController
 	GENERATED_UCLASS_BODY()
 	void Interact();
 
+	FString temp[3];
+
+	void talk();
+
 };

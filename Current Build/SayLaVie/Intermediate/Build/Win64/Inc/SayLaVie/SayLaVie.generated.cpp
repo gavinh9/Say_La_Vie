@@ -28,6 +28,10 @@ void EmptyLinkFunctionForGeneratedCodeSayLaVie() {}
 	{
 	}
 	IMPLEMENT_CLASS(ASayLaVieGameMode, 4283410433);
+	void AsayLaVieHUD::StaticRegisterNativesAsayLaVieHUD()
+	{
+	}
+	IMPLEMENT_CLASS(AsayLaVieHUD, 1309745546);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
@@ -36,6 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeSayLaVie() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameMode();
+	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
+	ENGINE_API class UClass* Z_Construct_UClass_UFont_NoRegister();
 
 	SAYLAVIE_API class UClass* Z_Construct_UClass_AminigameActor_NoRegister();
 	SAYLAVIE_API class UClass* Z_Construct_UClass_AminigameActor();
@@ -47,6 +53,8 @@ void EmptyLinkFunctionForGeneratedCodeSayLaVie() {}
 	SAYLAVIE_API class UClass* Z_Construct_UClass_ASayLaVieCharacter();
 	SAYLAVIE_API class UClass* Z_Construct_UClass_ASayLaVieGameMode_NoRegister();
 	SAYLAVIE_API class UClass* Z_Construct_UClass_ASayLaVieGameMode();
+	SAYLAVIE_API class UClass* Z_Construct_UClass_AsayLaVieHUD_NoRegister();
+	SAYLAVIE_API class UClass* Z_Construct_UClass_AsayLaVieHUD();
 	SAYLAVIE_API class UPackage* Z_Construct_UPackage_SayLaVie();
 	UClass* Z_Construct_UClass_AminigameActor_NoRegister()
 	{
@@ -226,6 +234,49 @@ void EmptyLinkFunctionForGeneratedCodeSayLaVie() {}
 		return OuterClass;
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ASayLaVieGameMode(Z_Construct_UClass_ASayLaVieGameMode, TEXT("ASayLaVieGameMode"));
+	UClass* Z_Construct_UClass_AsayLaVieHUD_NoRegister()
+	{
+		return AsayLaVieHUD::StaticClass();
+	}
+	UClass* Z_Construct_UClass_AsayLaVieHUD()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AHUD();
+			Z_Construct_UPackage_SayLaVie();
+			OuterClass = AsayLaVieHUD::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x2090028C;
+
+
+				UProperty* NewProp_dialogue = new(OuterClass, TEXT("dialogue"), RF_Public|RF_Transient|RF_Native) UStrProperty(CPP_PROPERTY_BASE(dialogue, AsayLaVieHUD), 0x0000000000000000);
+				UProperty* NewProp_DisplayText = new(OuterClass, TEXT("DisplayText"), RF_Public|RF_Transient|RF_Native) UStrProperty(CPP_PROPERTY_BASE(DisplayText, AsayLaVieHUD), 0x0000000000000000);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(isDialogue, AsayLaVieHUD, bool);
+				UProperty* NewProp_isDialogue = new(OuterClass, TEXT("isDialogue"), RF_Public|RF_Transient|RF_Native) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(isDialogue, AsayLaVieHUD), 0x0000000000000000, CPP_BOOL_PROPERTY_BITMASK(isDialogue, AsayLaVieHUD), sizeof(bool), true);
+				UProperty* NewProp_HUDFont = new(OuterClass, TEXT("HUDFont"), RF_Public|RF_Transient|RF_Native) UObjectProperty(CPP_PROPERTY_BASE(HUDFont, AsayLaVieHUD), 0x0000000000000000, Z_Construct_UClass_UFont_NoRegister());
+				OuterClass->ClassConfigName = FName(TEXT("Game"));
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Rendering Actor Input Replication"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("sayLaVieHUD.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Public/sayLaVieHUD.h"));
+				MetaData->SetValue(OuterClass, TEXT("ShowCategories"), TEXT("Input|MouseInput Input|TouchInput"));
+				MetaData->SetValue(NewProp_dialogue, TEXT("ModuleRelativePath"), TEXT("Public/sayLaVieHUD.h"));
+				MetaData->SetValue(NewProp_DisplayText, TEXT("ModuleRelativePath"), TEXT("Public/sayLaVieHUD.h"));
+				MetaData->SetValue(NewProp_isDialogue, TEXT("ModuleRelativePath"), TEXT("Public/sayLaVieHUD.h"));
+				MetaData->SetValue(NewProp_HUDFont, TEXT("ModuleRelativePath"), TEXT("Public/sayLaVieHUD.h"));
+				MetaData->SetValue(NewProp_HUDFont, TEXT("ToolTip"), TEXT("Setting the Font for the HUD"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_AsayLaVieHUD(Z_Construct_UClass_AsayLaVieHUD, TEXT("AsayLaVieHUD"));
 	UPackage* Z_Construct_UPackage_SayLaVie()
 	{
 		static UPackage* ReturnPackage = NULL;
@@ -234,8 +285,8 @@ void EmptyLinkFunctionForGeneratedCodeSayLaVie() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/SayLaVie")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x317853BE;
-			Guid.B = 0xF487A75E;
+			Guid.A = 0xF838C000;
+			Guid.B = 0xDD71D019;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

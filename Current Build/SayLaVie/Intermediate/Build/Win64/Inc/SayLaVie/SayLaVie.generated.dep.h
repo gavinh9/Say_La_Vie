@@ -20,3 +20,6 @@
 #ifndef SAYLAVIE_SayLaVieGameMode_generated_h
 	#include "Public/SayLaVieGameMode.h"
 #endif
+#ifndef SAYLAVIE_sayLaVieHUD_generated_h
+	#include "Public/sayLaVieHUD.h"
+#endif

@@ -58,12 +58,14 @@
 		<ClCompile Include="..\..\Source\SayLaVie\Private\SayLaVie.cpp" />
 		<ClCompile Include="..\..\Source\SayLaVie\Private\SayLaVieCharacter.cpp" />
 		<ClCompile Include="..\..\Source\SayLaVie\Private\SayLaVieGameMode.cpp" />
+		<ClCompile Include="..\..\Source\SayLaVie\Private\sayLaVieHUD.cpp" />
 		<ClInclude Include="..\..\Source\SayLaVie\Public\groceryMinigame.h" />
 		<ClInclude Include="..\..\Source\SayLaVie\Public\minigameActor.h" />
 		<ClInclude Include="..\..\Source\SayLaVie\Public\minigameController.h" />
 		<ClInclude Include="..\..\Source\SayLaVie\Public\SayLaVie.h" />
 		<ClInclude Include="..\..\Source\SayLaVie\Public\SayLaVieCharacter.h" />
 		<ClInclude Include="..\..\Source\SayLaVie\Public\SayLaVieGameMode.h" />
+		<ClInclude Include="..\..\Source\SayLaVie\Public\sayLaVieHUD.h" />
 		<ResourceCompile Include="..\..\Source\SayLaVie\Resources\Windows\SayLaVie.rc" />
 	</ItemGroup>
 	<PropertyGroup Label="Globals">

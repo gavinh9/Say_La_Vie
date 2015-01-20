@@ -11,6 +11,8 @@ ASayLaVieCharacter::ASayLaVieCharacter(const class FPostConstructInitializePrope
 	: Super(PCIP)
 {
 
+	printToScreen = "";
+
 	//This is the player component that allows the player to interact with in game objects
 	InteractionRadius = PCIP.CreateDefaultSubobject<USphereComponent>(this, TEXT("InteractionRadius"));
 	InteractionRadius->AttachTo(RootComponent);

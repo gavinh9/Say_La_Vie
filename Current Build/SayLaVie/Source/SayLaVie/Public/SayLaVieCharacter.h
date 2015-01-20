@@ -33,6 +33,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+public:
+	FString printToScreen;
+
 protected:
 
 	/** Called for forwards/backward input */
