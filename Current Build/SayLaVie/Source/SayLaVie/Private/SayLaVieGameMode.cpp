@@ -3,7 +3,7 @@
 #include "SayLaVie.h"
 #include "SayLaVieGameMode.h"
 #include "SayLaVieCharacter.h"
-#include "sayLaVieHUD.h"
+//#include "sayLaVieHUD.h"
 
 ASayLaVieGameMode::ASayLaVieGameMode(const class FPostConstructInitializeProperties& PCIP)
 	: Super(PCIP)
@@ -14,5 +14,5 @@ ASayLaVieGameMode::ASayLaVieGameMode(const class FPostConstructInitializePropert
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
-	HUDClass = AsayLaVieHUD::StaticClass();
+	//HUDClass = AsayLaVieHUD::StaticClass();
 }

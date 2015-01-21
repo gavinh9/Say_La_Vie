@@ -1,22 +1,21 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "SayLaVie.h"
+#include "SayLaVieCharacter.h"
 #include "sayLaVieHUD.h"
-#include "Kismet/GameplayStatics.h"
 #include "Engine/Canvas.h"
 #include "Engine/Font.h"
-#include "SayLaVieCHaracter.h"
 
 
 AsayLaVieHUD::AsayLaVieHUD(const class FPostConstructInitializeProperties& PCIP) :Super(PCIP)
 {
+
 	static ConstructorHelpers::FObjectFinder<UFont>HUDFontOb(TEXT("/Engine/EngineFonts/Roboto"));
 	HUDFont = HUDFontOb.Object;
 	isDialogue = false;
 	FString DisplayText = "";
 	dialogue = "";
 	dialogueTimer = 0;
-	criossant = Cast<ASayLaVieCharacter>(UGameplayStatics::GetPlayerPawn(this, 0));
 
 }
 
@@ -34,13 +33,15 @@ which can be modified by changing the value of dialogueTimer
 void AsayLaVieHUD::DrawHUD()
 {
 	Super::DrawHUD();
-
+	
+	ASayLaVieCharacter* criossant = Cast<ASayLaVieCharacter>(UGameplayStatics::GetPlayerPawn(this, 0));
 	FVector2D ScreenDimensions = FVector2D(Canvas->SizeX, Canvas->SizeY);
 	DrawText(DisplayText, FColor::Red, 800, 800, HUDFont);
 	FString dialogue;
 	if (isDialogue){
 		DrawText(dialogue, FColor::Red, 900, 800, HUDFont);
 	}
+
 	if (criossant->printToScreen != "")
 		AsayLaVieHUD::Dialogue(criossant->printToScreen);
 	if (dialogueTimer > 0){
@@ -50,6 +51,7 @@ void AsayLaVieHUD::DrawHUD()
 			criossant->printToScreen = "";
 		}
 	}
+
 
 }
 

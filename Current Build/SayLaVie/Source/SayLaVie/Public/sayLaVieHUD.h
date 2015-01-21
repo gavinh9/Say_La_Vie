@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include "SayLaVieCharacter.h"
 #include "GameFramework/HUD.h"
 #include "sayLaVieHUD.generated.h"
 
@@ -33,6 +32,4 @@ class SAYLAVIE_API AsayLaVieHUD : public AHUD
 	virtual void DrawHUD() override;
 	void Dialogue(FString);
 	
-	ASayLaVieCharacter* criossant;
-
 };

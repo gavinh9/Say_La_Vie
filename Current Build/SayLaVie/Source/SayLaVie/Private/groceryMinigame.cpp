@@ -3,7 +3,7 @@
 #include "SayLaVie.h"
 #include "minigameController.h"
 #include "groceryMinigame.h"
-#include "sayLaVieHUD.h"
+//#include "sayLaVieHUD.h"
 #include "SayLaVieCharacter.h"
 #include <iostream>
 #include <string>
